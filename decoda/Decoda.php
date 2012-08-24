@@ -77,7 +77,7 @@ class Decoda {
 		'shorthand' => false,
 		'xhtml' => false,
 		'escape' => true,
-		'strict' => true,
+		'strict' => false,
 		'locale' => 'en-us'
 	);
 

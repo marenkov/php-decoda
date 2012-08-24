@@ -19,7 +19,7 @@ class EmoticonHook extends DecodaHook {
 	 * @var array
 	 */
 	protected $_config = array(
-		'path' => ''
+		'path' => '/emoticons/'
 	);
 
 	/**
@@ -103,7 +103,7 @@ class EmoticonHook extends DecodaHook {
 		$image = $this->getParser()->getFilter('Image')->parse(array(
 			'tag' => 'img',
 			'attributes' => array()
-		), $this->_config['path'] . $this->_map[$smiley] . '.png');
+		), $this->_config['path'] . $this->_map[$smiley] . '.gif');
 
 		return $l . $image . $r;
 	}
