@@ -1,16 +1,21 @@
 <?php
 /**
- * ImageFilter
- *
- * Provides tags for images.
- *
  * @author      Miles Johnson - http://milesj.me
- * @copyright   Copyright 2006-2011, Miles Johnson, Inc.
+ * @copyright   Copyright 2006-2012, Miles Johnson, Inc.
  * @license     http://opensource.org/licenses/mit-license.php - Licensed under The MIT License
  * @link        http://milesj.me/code/php/decoda
  */
 
-class ImageFilter extends DecodaFilter {
+namespace mjohnson\decoda\filters;
+
+use mjohnson\decoda\filters\FilterAbstract;
+
+/**
+ * Provides tags for images.
+ *
+ * @package	mjohnson.decoda.filters
+ */
+class ImageFilter extends FilterAbstract {
 
 	/**
 	 * Regex pattern.
@@ -61,7 +66,7 @@ class ImageFilter extends DecodaFilter {
 	public function parse(array $tag, $content) {
 		// If more than 1 http:// is found in the string, possible XSS attack
 		if (substr_count($content, 'http://') > 1) {
-			return;
+			return null;
 		}
 
 		$tag['attributes']['src'] = $content;
