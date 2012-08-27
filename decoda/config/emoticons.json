@@ -1,8 +1,8 @@
 {
     "smile":    [":)", ":-)", ":smile:"],
+    "angry":	[ "&gt;:(", "&gt;:-(", ":angry:" ],
     "sad":		[ ":(",  ":-(", ":sad:" ],
     "wink":		[ ";)", ";-)", ";D", ";-D", ":wink:" ],
-    "angry":	[ "&gt:(", "&gt:-(", ":angry:" ],
     "yes":		[ ":yes:" ],
     "grin":     [ ":D", ":-D" ],
 	"tongue":	[ ":P", ":p", ":-P", ":-p", ":tongue:" ],
