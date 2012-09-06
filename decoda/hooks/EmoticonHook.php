@@ -75,7 +75,7 @@ class EmoticonHook extends DecodaHook {
 		if ($this->getParser()->getFilter('Image') && !empty($this->_emoticons)) {
 			foreach ($this->_emoticons as $smilies) {
 				foreach ($smilies as $smile) {
-					$content = preg_replace_callback('/(\s)?' . preg_quote($smile, '/') . '(\s)?/is', array($this, '_emoticonCallback'), $content);
+					$content = preg_replace_callback('/(\s|^)?' . preg_quote($smile, '/') . '(\s|$)?/is', array($this, '_emoticonCallback'), $content);
 				}
 			}
 		}
@@ -93,7 +93,7 @@ class EmoticonHook extends DecodaHook {
 	protected function _emoticonCallback($matches) {
 		$smiley = trim($matches[0]);
 
-		if (count($matches) === 1 || !isset($this->_map[$smiley])) {
+		if (count($matches) === 0 || !isset($this->_map[$smiley])) {
 			return $matches[0];
 		}
 
