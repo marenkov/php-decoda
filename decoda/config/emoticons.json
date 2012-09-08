@@ -52,5 +52,7 @@
     "timeout":      [":timeout:"],
     "unknown":      [":dont_know:"],
     "yahoo":        [":yahoo:"],
-    "yes":          [":yes:"]
+    "yes":          [":yes:"],
+    "give_heart":   [":give_heart:"],
+    "give_rose":    [":give_rose:"]
 }
